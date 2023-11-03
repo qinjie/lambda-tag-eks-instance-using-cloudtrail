@@ -1,0 +1,286 @@
+{
+  "version": "0",
+  "id": "b03f6e6c-1a74-4f69-e219-84e2498d7f20",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "123456789012",
+  "time": "2022-04-01T00:00:00Z",
+  "region": "us-east-1",
+  "resources": [],
+  "detail": {
+    "eventVersion": "1.08",
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROAWWNJHDG5EZDO4IS5S:AutoScaling",
+      "arn": "arn:aws:sts::460453255610:assumed-role/AWSServiceRoleForAutoScaling/AutoScaling",
+      "accountId": "460453255610",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROAWWNJHDG5EZDO4IS5S",
+          "arn": "arn:aws:iam::460453255610:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling",
+          "accountId": "460453255610",
+          "userName": "AWSServiceRoleForAutoScaling"
+        },
+        "webIdFederationData": {},
+        "attributes": {
+          "creationDate": "2023-11-03T03:16:14Z",
+          "mfaAuthenticated": "false"
+        }
+      },
+      "invokedBy": "autoscaling.amazonaws.com"
+    },
+    "eventTime": "2023-11-03T03:16:15Z",
+    "eventSource": "ec2.amazonaws.com",
+    "eventName": "RunInstances",
+    "awsRegion": "ap-southeast-1",
+    "sourceIPAddress": "autoscaling.amazonaws.com",
+    "userAgent": "autoscaling.amazonaws.com",
+    "requestParameters": {
+      "instancesSet": {
+        "items": [
+          {
+            "minCount": 1,
+            "maxCount": 1
+          }
+        ]
+      },
+      "instanceType": "t3.medium",
+      "blockDeviceMapping": {},
+      "availabilityZone": "ap-southeast-1c",
+      "monitoring": {
+        "enabled": false
+      },
+      "disableApiTermination": false,
+      "disableApiStop": false,
+      "clientToken": "fleet-3faf50a4-3db5-e194-2eb8-040acdc21a3b-0",
+      "networkInterfaceSet": {
+        "items": [
+          {
+            "deviceIndex": 0,
+            "subnetId": "subnet-04b286aca6c68d89e"
+          }
+        ]
+      },
+      "tagSpecificationSet": {
+        "items": [
+          {
+            "resourceType": "instance",
+            "tags": [
+              {
+                "key": "aws:autoscaling:groupName",
+                "value": "eks-test3-5ac5c996-f8a6-c814-52d1-197c6e92c877"
+              },
+              {
+                "key": "eks:cluster-name",
+                "value": "test"
+              },
+              {
+                "key": "kubernetes.io/cluster/test",
+                "value": "owned"
+              },
+              {
+                "key": "eks:nodegroup-name",
+                "value": "test3"
+              },
+              {
+                "key": "k8s.io/cluster-autoscaler/enabled",
+                "value": "true"
+              },
+              {
+                "key": "k8s.io/cluster-autoscaler/test",
+                "value": "owned"
+              },
+              {
+                "key": "aws:ec2:fleet-id",
+                "value": "fleet-3faf50a4-3db5-e194-2eb8-040acdc21a3b"
+              }
+            ]
+          }
+        ]
+      },
+      "launchTemplate": {
+        "launchTemplateId": "lt-01ae9c4723ea794ce",
+        "version": "1"
+      }
+    },
+    "responseElements": {
+      "requestId": "0e21113e-dbcc-4143-be64-4d1db3c10d84",
+      "reservationId": "r-02744d6b1c57a1b71",
+      "ownerId": "460453255610",
+      "groupSet": {},
+      "instancesSet": {
+        "items": [
+          {
+            "instanceId": "i-0df75bb4a8cf2f384",
+            "imageId": "ami-04eb11ef723b8feb1",
+            "currentInstanceBootMode": "legacy-bios",
+            "instanceState": {
+              "code": 0,
+              "name": "pending"
+            },
+            "privateDnsName": "ip-172-31-1-10.ap-southeast-1.compute.internal",
+            "amiLaunchIndex": 0,
+            "productCodes": {},
+            "instanceType": "t3.medium",
+            "launchTime": 1698981375000,
+            "placement": {
+              "availabilityZone": "ap-southeast-1c",
+              "tenancy": "default"
+            },
+            "monitoring": {
+              "state": "disabled"
+            },
+            "subnetId": "subnet-04b286aca6c68d89e",
+            "vpcId": "vpc-0af578573faa8f10d",
+            "privateIpAddress": "172.31.1.10",
+            "stateReason": {
+              "code": "pending",
+              "message": "pending"
+            },
+            "architecture": "x86_64",
+            "rootDeviceType": "ebs",
+            "rootDeviceName": "/dev/xvda",
+            "blockDeviceMapping": {},
+            "virtualizationType": "hvm",
+            "hypervisor": "xen",
+            "tagSet": {
+              "items": [
+                {
+                  "key": "k8s.io/cluster-autoscaler/enabled",
+                  "value": "true"
+                },
+                {
+                  "key": "aws:ec2:fleet-id",
+                  "value": "fleet-3faf50a4-3db5-e194-2eb8-040acdc21a3b"
+                },
+                {
+                  "key": "k8s.io/cluster-autoscaler/test",
+                  "value": "owned"
+                },
+                {
+                  "key": "aws:autoscaling:groupName",
+                  "value": "eks-test3-5ac5c996-f8a6-c814-52d1-197c6e92c877"
+                },
+                {
+                  "key": "aws:ec2launchtemplate:id",
+                  "value": "lt-01ae9c4723ea794ce"
+                },
+                {
+                  "key": "kubernetes.io/cluster/test",
+                  "value": "owned"
+                },
+                {
+                  "key": "aws:ec2launchtemplate:version",
+                  "value": "1"
+                },
+                {
+                  "key": "eks:nodegroup-name",
+                  "value": "test3"
+                },
+                {
+                  "key": "eks:cluster-name",
+                  "value": "test"
+                }
+              ]
+            },
+            "clientToken": "fleet-3faf50a4-3db5-e194-2eb8-040acdc21a3b-0",
+            "groupSet": {
+              "items": [
+                {
+                  "groupId": "sg-0ff0e5bdc06c913d5",
+                  "groupName": "eks-cluster-sg-test-3556498"
+                }
+              ]
+            },
+            "sourceDestCheck": true,
+            "networkInterfaceSet": {
+              "items": [
+                {
+                  "networkInterfaceId": "eni-0768cb36c9c022d8f",
+                  "subnetId": "subnet-04b286aca6c68d89e",
+                  "vpcId": "vpc-0af578573faa8f10d",
+                  "ownerId": "460453255610",
+                  "status": "in-use",
+                  "macAddress": "0a:de:8a:3f:01:72",
+                  "privateIpAddress": "172.31.1.10",
+                  "privateDnsName": "ip-172-31-1-10.ap-southeast-1.compute.internal",
+                  "sourceDestCheck": true,
+                  "interfaceType": "interface",
+                  "groupSet": {
+                    "items": [
+                      {
+                        "groupId": "sg-0ff0e5bdc06c913d5",
+                        "groupName": "eks-cluster-sg-test-3556498"
+                      }
+                    ]
+                  },
+                  "attachment": {
+                    "attachmentId": "eni-attach-06bdfc67e73c62281",
+                    "deviceIndex": 0,
+                    "networkCardIndex": 0,
+                    "status": "attaching",
+                    "attachTime": 1698981375000,
+                    "deleteOnTermination": true
+                  },
+                  "privateIpAddressesSet": {
+                    "item": [
+                      {
+                        "privateIpAddress": "172.31.1.10",
+                        "privateDnsName": "ip-172-31-1-10.ap-southeast-1.compute.internal",
+                        "primary": true
+                      }
+                    ]
+                  },
+                  "ipv6AddressesSet": {},
+                  "tagSet": {}
+                }
+              ]
+            },
+            "iamInstanceProfile": {
+              "arn": "arn:aws:iam::460453255610:instance-profile/eks-5ac5c996-f8a6-c814-52d1-197c6e92c877",
+              "id": "AIPAWWNJHDG5FZSHAYWTF"
+            },
+            "ebsOptimized": false,
+            "enaSupport": true,
+            "cpuOptions": {
+              "coreCount": 1,
+              "threadsPerCore": 2
+            },
+            "capacityReservationSpecification": {
+              "capacityReservationPreference": "open"
+            },
+            "enclaveOptions": {
+              "enabled": false
+            },
+            "metadataOptions": {
+              "state": "pending",
+              "httpTokens": "optional",
+              "httpPutResponseHopLimit": 2,
+              "httpEndpoint": "enabled",
+              "httpProtocolIpv4": "enabled",
+              "httpProtocolIpv6": "disabled",
+              "instanceMetadataTags": "disabled"
+            },
+            "maintenanceOptions": {
+              "autoRecovery": "default"
+            },
+            "privateDnsNameOptions": {
+              "hostnameType": "ip-name",
+              "enableResourceNameDnsARecord": false,
+              "enableResourceNameDnsAAAARecord": false
+            }
+          }
+        ]
+      },
+      "requesterId": "434902558031"
+    },
+    "requestID": "0e21113e-dbcc-4143-be64-4d1db3c10d84",
+    "eventID": "92b34690-07a9-4c28-b469-3d1e10e6d21b",
+    "readOnly": false,
+    "eventType": "AwsApiCall",
+    "managementEvent": true,
+    "recipientAccountId": "460453255610",
+    "eventCategory": "Management"
+  }
+}
